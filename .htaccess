@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^beta/?$ homepage.php
+RewriteRule ^signin/?$ login.php
+RewriteRule ^signup/?$ register.php
+RewriteRule ^contact/?$ contacts.php
+RewriteRule ^submit/?$ productsubmit.php
+
+#RewriteRule ^profile/([a-zA-Z0-9_-]+)/comment/([0-9]+) statusview.php?s=$2&user=$1
+#RewriteRule ^profile/([a-zA-Z0-9_-]+)/notifications notifications.php?userid=$1
+#RewriteRule ^profile/([a-zA-Z0-9_-]+) profile.php?id=$1
+#RewriteRule ^([a-z_-]+)/([a-z0-9_-]+)/([0-9]+) product.php?p=$1
+
+</IfModule>
